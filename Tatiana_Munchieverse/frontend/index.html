@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiana Munchieverse</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0a0a0a;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        canvas {
+            display: block;
+        }
+        #quest-log {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ff41;
+            color: #00ff41;
+        }
+        #dialogue-box {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff41;
+            color: #fff;
+            font-size: 18px;
+            display: none; /* Hidden by default */
+        }
+        #inventory-ui {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ff41;
+            color: #00ff41;
+        }
+        #notification-area {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px #000;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            pointer-events: none; /* Make it non-interactive */
+        }
+    </style>
+</head>
+<body>
+    <div id="quest-log"></div>
+    <div id="inventory-ui"></div>
+    <div id="dialogue-box"></div>
+    <div id="notification-area"></div>
+    <canvas id="munchieverse-canvas"></canvas>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
